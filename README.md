@@ -1,68 +1,42 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+基于角色管理的简易企业人事管理系统
+-----------------------------
 
-## Available Scripts
+## 课题内容
 
-In the project directory, you can run:
+企业人事管理系统是查询企业员工信息必不可少的一部分，利用人事管理系统可以清楚的了解企业员工信息。该企业人事管理系统是通过树来实现的。要求系统界面友好，易于操作。
+
+## 课题要求
+
+1. 需要设置普通用户、超级管理员不同角色，不同角色登录后的权限各不相同。普通用户可以查询自己个人信息及修改个人基本资料；超级管理员有对所有成员有查询、增加、删除和修改的权限。
+2. 成员的信息中均应包含姓名、入职日期、婚否、地址、职位信息、是否离职等，也可附加其它信息，并存储于文本文件中。
+3. 查询功能。可按照姓名查询，输出成员信息（包括其本人、上司、下属信息、职位）；按照入职日期查询成员名单。
+4. 按入职日期对企业中所有人排序。
+5. 以图形方式显示企业职工分布。
+
+## 其他要求
+
+1. 变量、函数命名符合规范。
+2. 注释详细：每个变量都要求有注释说明用途；函数有注释说明功能，对参数、返回值也要以注释的形式说明用途；关键的语句段要求有注释解释。
+3. 程序的层次清晰，可读性强。
+4. 界面美观，交互方便。
+
+## 可运行的命令
 
 ### `yarn start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+在开发模式下运行应用.<br />
+打开 [http://localhost:3000](http://localhost:3000)，可以在浏览器里看到.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+每一次做了修改，页面都会重新更新<br />
+如果有任何错误，都可以在控制台里看到。
 
 ### `yarn build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+用于线上环境，将代码打包到 `build` 文件夹下<br />
 
 ### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**注意: 这是个一次性操作. 一旦你 `eject`, 就不能返回了！**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+`eject` 提供了一个可以自己重新修改 `React` 的 `webpack` 配置的途径。
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
