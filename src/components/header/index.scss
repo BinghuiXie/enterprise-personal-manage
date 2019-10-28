@@ -1,12 +1,13 @@
 @import "../../variables";
 
 .header-wrapper{
-  padding: 12px 24px;
+  padding: 12px 48px;
   background-color: $primaryColor;
   .header-container{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
     .title{
       font-size: 18px;
       font-weight: 600;
@@ -28,6 +29,34 @@
         font-weight: 600;
         font-size: 20px;
         color: #eeeeee
+      }
+    }
+  }
+}
+
+.menu-wrapper{
+  background-color: $primaryColor;
+  box-shadow: 0 0 4px #000000;
+  position: absolute;
+  top: 48px;
+  right: -24px;
+  .menu-list{
+    padding: 0;
+    .menu-item{
+      padding: 0 20px;
+      font-size: 12px;
+      cursor: pointer;
+      &:nth-of-type(1){
+        padding-top: 6px;
+        padding-bottom: 10px;
+      }
+      &:nth-of-type(2){
+        padding-bottom: 6px;
+        padding-top: 10px;
+      }
+      span{
+        color: #eeeeee;
+        margin-right: 12px;
       }
     }
   }

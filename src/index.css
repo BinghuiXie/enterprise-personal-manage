@@ -15,3 +15,7 @@ code {
 input, button {
     outline: none;
 }
+
+ul, li{
+    list-style: none;
+}

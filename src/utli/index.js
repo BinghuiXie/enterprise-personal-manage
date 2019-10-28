@@ -84,8 +84,9 @@ export const useRedirect = () => {
       // 没有登录
       history.push('/login');
     }
-  })
+  }, [])
 };
+
 
 /* 处理参数 */
 /* 接受一个字符串，提取出其中特定的值并返回 */
