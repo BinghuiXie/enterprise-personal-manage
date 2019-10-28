@@ -1,0 +1,27 @@
+.header-wrapper {
+  padding: 12px 24px;
+  background-color: #282c34; }
+  .header-wrapper .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .header-wrapper .header-container .title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #eeeeee; }
+    .header-wrapper .header-container .personal-space {
+      display: flex;
+      align-items: center; }
+      .header-wrapper .header-container .personal-space:hover {
+        cursor: pointer; }
+      .header-wrapper .header-container .personal-space .avatar {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        margin-right: 6px; }
+      .header-wrapper .header-container .personal-space .iconfont {
+        font-weight: 600;
+        font-size: 20px;
+        color: #eeeeee; }
+
+/*# sourceMappingURL=index.css.map */

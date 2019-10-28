@@ -1,24 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
+import {
+  BrowserRouter as Router,
+  Route
+} from "react-router-dom";
+import { setCache, getCache } from "./utli";
+import Login from "./pages/login";
+import ManageInfo from "./pages/manageInfo";
+import Info from "./pages/Info";
+
 import './App.css';
+import './fonts/iconfont.css'
 
 function App() {
+  const userDataObtained = userData => {
+    setCache(userData);
+  };
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Route path="/login">
+          <Login onUserDataObtained={ userDataObtained }/>
+        </Route>
+        <Route path="/manageInfo">
+          <ManageInfo userData={ getCache("userData") }/>
+        </Route>
+        <Route path="/info">
+          <Info userData={ getCache("userData") } />
+        </Route>
+      </Router>
     </div>
   );
 }

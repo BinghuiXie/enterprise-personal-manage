@@ -1,0 +1,34 @@
+@import "../../variables";
+
+.header-wrapper{
+  padding: 12px 24px;
+  background-color: $primaryColor;
+  .header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .title{
+      font-size: 18px;
+      font-weight: 600;
+      color: #eeeeee;
+    }
+    .personal-space{
+      display: flex;
+      align-items: center;
+      &:hover{
+        cursor: pointer;
+      }
+      .avatar{
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        margin-right: 6px;
+      }
+      .iconfont{
+        font-weight: 600;
+        font-size: 20px;
+        color: #eeeeee
+      }
+    }
+  }
+}
