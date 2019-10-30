@@ -1,28 +1,29 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
-import { useRedirect, isAdministrator, getCookie } from "../../utli";
+import { isAdministrator, getCookie } from "../../utli";
+import { useUserData, useRedirect } from "../../customHook";
 
 import Header from "../../components/header";
 
 const ManageInfo = props => {
   const history = useHistory();
-  const [ userData, setUserData ] = useState({});
   
   useRedirect();
   
+  const userData = useUserData(props.userData);
+  
   useEffect(() => {
     const cookie = getCookie();
-    const { userData } = props;
-    setUserData(userData);
     if (!isAdministrator(cookie.AuthKey, ",")) {
       // 不是管理员
       history.push('/info');
     }
-  }, [ props.userData ]);
+  }, [history]);
   
   return (
     <div>
       <Header title="人事管理系统" avatar={ userData.avatar }/>
+      
     </div>
   )
 };

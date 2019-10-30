@@ -42,16 +42,17 @@
   right: -24px;
   .menu-list{
     padding: 0;
+    margin: 0;
     .menu-item{
       padding: 0 20px;
       font-size: 12px;
       cursor: pointer;
       &:nth-of-type(1){
-        padding-top: 6px;
+        padding-top: 22px;
         padding-bottom: 10px;
       }
       &:nth-of-type(2){
-        padding-bottom: 6px;
+        padding-bottom: 22px;
         padding-top: 10px;
       }
       span{

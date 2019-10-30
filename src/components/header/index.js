@@ -14,12 +14,15 @@ const Menu = props => {
   };
   
   const onMenuItemClick = (event) => {
+    console.log(event.currentTarget.children[1].innerText);
     switch (event.currentTarget.children[1].innerText) {
       case '个人中心':
         // 跳转到个人中心
         history.push('/personal');
+        break;
       case '退出登录':
         onUserLogout();
+        break;
       default:
         return ;
     }

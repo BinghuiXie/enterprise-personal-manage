@@ -1,0 +1,49 @@
+@charset "UTF-8";
+.personal-center {
+  background-color: #eeeeee;
+  min-height: 100vh; }
+  .personal-center .info-container {
+    background-color: #ffffff;
+    width: 80%;
+    margin: 48px auto;
+    overflow: hidden; }
+    .personal-center .info-container .inner-container {
+      margin: 36px 0 36px 72px; }
+      .personal-center .info-container .inner-container .title {
+        line-height: 2.5;
+        font-family: 榛戜綋;
+        font-size: 24px; }
+      .personal-center .info-container .inner-container .personal-settings .avatar-setting {
+        margin-bottom: 36px; }
+        .personal-center .info-container .inner-container .personal-settings .avatar-setting img {
+          width: 96px;
+          height: 96px;
+          border-radius: 50%;
+          box-shadow: 0 0 2px #000000;
+          cursor: pointer; }
+      .personal-center .info-container .inner-container .personal-settings .setting-list span.setting-item {
+        display: inline-block;
+        color: rgba(71, 86, 99, 0.8);
+        font-weight: 500;
+        padding: 0 16px;
+        text-indent: .4em;
+        margin-right: 30px;
+        white-space: nowrap;
+        text-align: right;
+        width: 100px;
+        margin-bottom: 36px;
+        vertical-align: top; }
+
+.change-info {
+  display: inline-block; }
+  .change-info input {
+    width: 300px;
+    margin-right: 24px; }
+  .change-info button {
+    margin-right: 24px; }
+  .change-info .password-box {
+    width: 500px; }
+    .change-info .password-box input {
+      margin-bottom: 18px; }
+
+/*# sourceMappingURL=index.css.map */

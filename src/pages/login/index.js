@@ -15,7 +15,6 @@ function Login (props) {
     if (resData) {
       if (resData.errno) {
         // 登录成功
-        console.log('resData: ', resData);
         props.onUserDataObtained(resData.data);
         if (parseInt(resData.data.ability) === 1) {
           // 管理员

@@ -1,6 +1,4 @@
-import { useEffect } from 'react';
-import { useHistory } from 'react-router-dom'
-import { USER_DATA_KEY, USER_DATE_EXPIRES } from "../constants";
+import { USER_DATE_EXPIRES } from "../constants";
 
 export const isEqual = (value, other) => {
   
@@ -74,20 +72,6 @@ export const getCookie = () => {
   return cookie;
 };
 
-/* 路由拦截 */
-export const useRedirect = () => {
-  const history = useHistory();
-  
-  useEffect(() => {
-    const cookie = getCookie();
-    if (cookie.AuthKey === undefined) {
-      // 没有登录
-      history.push('/login');
-    }
-  }, [])
-};
-
-
 /* 处理参数 */
 /* 接受一个字符串，提取出其中特定的值并返回 */
 export const isAdministrator = (string, splitLetter) => {
@@ -98,23 +82,22 @@ export const isAdministrator = (string, splitLetter) => {
   res = string;
   res = decodeURIComponent(res);
   res = res.split(splitLetter);
-  console.log(res);
   return res.length > 1
 };
 
 /* 设置缓存 */
 /* 参数：缓存内容 */
-export const setCache = (data) => {
+export const setCache = (data, key) => {
   const saveData = JSON.stringify(data);
-  const lastCache = localStorage.getItem(USER_DATA_KEY);
+  const lastCache = localStorage.getItem(key);
   if (lastCache) {
     if (!isEqual(lastCache, saveData)) {
-      localStorage.setItem(USER_DATA_KEY, saveData)
+      localStorage.setItem(key, saveData)
     }
   } else {
     /* 第一次缓存 */
     const time = Date.now();
-    localStorage.setItem(USER_DATA_KEY, saveData);
+    localStorage.setItem(key, saveData);
     localStorage.setItem("expires", time);
   }
 };
@@ -135,7 +118,6 @@ export const getCache = (key) => {
 export const removeCache = (key, expires) => {
   const time = localStorage.getItem("expires");
   const isOverdue = (Date.now() - time) > expires;
-  console.log(isOverdue);
   if (isOverdue) {
     localStorage.removeItem(key);
     return true;

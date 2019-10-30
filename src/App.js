@@ -7,13 +7,15 @@ import { setCache, getCache } from "./utli";
 import Login from "./pages/login";
 import ManageInfo from "./pages/manageInfo";
 import Info from "./pages/Info";
+import Personal from "./pages/personal";
 
 import './App.css';
+import 'antd/dist/antd.css';
 import './fonts/iconfont.css'
 
 function App() {
   const userDataObtained = userData => {
-    setCache(userData);
+    setCache(userData, "userData");
   };
   
   return (
@@ -27,6 +29,9 @@ function App() {
         </Route>
         <Route path="/info">
           <Info userData={ getCache("userData") } />
+        </Route>
+        <Route path="/personal">
+          <Personal userData={ getCache("userData") } />
         </Route>
       </Router>
     </div>

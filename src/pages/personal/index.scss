@@ -1,0 +1,62 @@
+.personal-center{
+  background-color: #eeeeee;
+  min-height: 100vh;
+  .info-container{
+    background-color: #ffffff;
+    width: 80%;
+    margin: 48px auto;
+    overflow: hidden;
+    .inner-container{
+      margin: 36px 0 36px 72px;
+      .title{
+        line-height: 2.5;
+        font-family: 黑体;
+        font-size: 24px;
+      }
+      .personal-settings{
+        .avatar-setting{
+          margin-bottom: 36px;
+          img{
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            box-shadow: 0 0 2px #000000;
+            cursor: pointer;
+          }
+        }
+        .setting-list{
+          span.setting-item{
+            display: inline-block;
+            color: rgba(71,86,99,.8);
+            font-weight: 500;
+            padding: 0 16px;
+            text-indent: .4em;
+            margin-right: 30px;
+            white-space: nowrap;
+            text-align: right;
+            width: 100px;
+            margin-bottom: 36px;
+            vertical-align: top
+          }
+        }
+      }
+    }
+  }
+}
+
+.change-info{
+  display: inline-block;
+  input{
+    width: 300px;
+    margin-right: 24px;
+  }
+  button{
+    margin-right: 24px;
+  }
+  .password-box{
+    width: 500px;
+    input{
+      margin-bottom: 18px;
+    }
+  }
+}
