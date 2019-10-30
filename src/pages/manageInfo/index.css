@@ -1,0 +1,40 @@
+.manage-info {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh; }
+  .manage-info .layout-content {
+    flex-grow: 1;
+    width: 100%;
+    min-height: calc(100vh - 296px); }
+    .manage-info .layout-content .layout {
+      height: 100%;
+      display: flex; }
+      .manage-info .layout-content .layout .sider, .manage-info .layout-content .layout .content {
+        height: 100%; }
+      .manage-info .layout-content .layout .sider {
+        background-color: #282c34;
+        color: #eeeeee;
+        padding: 24px 0;
+        font-size: 16px; }
+        .manage-info .layout-content .layout .sider .sider-list .sider-item {
+          line-height: 3;
+          user-select: none;
+          padding: 0 20px;
+          text-align: center;
+          cursor: pointer; }
+          .manage-info .layout-content .layout .sider .sider-list .sider-item:hover {
+            background-color: #111111; }
+      .manage-info .layout-content .layout .content {
+        padding: 36px 0; }
+        .manage-info .layout-content .layout .content .inner-content {
+          width: 90%;
+          margin: 0 auto; }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 48px; }
+  .header .button-list .button {
+    margin-right: 28px; }
+
+/*# sourceMappingURL=index.css.map */

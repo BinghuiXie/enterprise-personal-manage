@@ -1,6 +1,7 @@
 .header-wrapper {
   padding: 12px 48px;
-  background-color: #282c34; }
+  background-color: #282c34;
+  width: 100%; }
   .header-wrapper .header-container {
     display: flex;
     justify-content: space-between;
@@ -29,6 +30,7 @@
   background-color: #282c34;
   box-shadow: 0 0 4px #000000;
   position: absolute;
+  z-index: 9999;
   top: 48px;
   right: -24px; }
   .menu-wrapper .menu-list {

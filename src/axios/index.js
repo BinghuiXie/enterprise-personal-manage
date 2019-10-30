@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { LOGOUT_BASE_URL } from "../constants";
+import { LOGOUT_BASE_URL, GET_USER_LIST_URL } from "../constants";
 
 axios.defaults.withCredentials = true;
 
@@ -31,4 +31,8 @@ export const validatePassword = (passwordObj, url) => {
 
 export const changeUserInfo = (userData, url) => {
   return axios.post(url, userData);
+};
+
+export const getUserList = () => {
+  return axios.get(GET_USER_LIST_URL);
 };

@@ -3,6 +3,7 @@
 .header-wrapper{
   padding: 12px 48px;
   background-color: $primaryColor;
+  width: 100%;
   .header-container{
     display: flex;
     justify-content: space-between;
@@ -38,6 +39,7 @@
   background-color: $primaryColor;
   box-shadow: 0 0 4px #000000;
   position: absolute;
+  z-index: 9999;
   top: 48px;
   right: -24px;
   .menu-list{

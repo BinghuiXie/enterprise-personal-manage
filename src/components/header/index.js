@@ -14,7 +14,6 @@ const Menu = props => {
   };
   
   const onMenuItemClick = (event) => {
-    console.log(event.currentTarget.children[1].innerText);
     switch (event.currentTarget.children[1].innerText) {
       case '个人中心':
         // 跳转到个人中心

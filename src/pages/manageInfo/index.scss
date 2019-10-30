@@ -1,0 +1,55 @@
+@import "../../variables";
+
+.manage-info{
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+  .layout-content{
+    flex-grow: 1;
+    width: 100%;
+    min-height: calc(100vh - 296px);
+    .layout{
+      height: 100%;
+      display: flex;
+      .sider, .content{
+        height: 100%;
+      }
+      .sider{
+        background-color: $primaryColor;
+        color: #eeeeee;
+        padding: 24px 0;
+        font-size: 16px;
+        .sider-list{
+          .sider-item{
+            line-height: 3;
+            user-select: none;
+            padding: 0 20px;
+            text-align: center;
+            cursor: pointer;
+            &:hover{
+              background-color: #111111;
+            }
+          }
+        }
+      }
+      .content{
+        padding: 36px 0;
+        .inner-content{
+          width: 90%;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 48px;
+  .button-list{
+    .button{
+      margin-right: 28px;
+    }
+  }
+}
