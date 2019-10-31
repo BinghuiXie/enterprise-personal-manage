@@ -125,4 +125,44 @@ export const removeCache = (key, expires) => {
   return false;
 };
 
+export const generateRandomInt = (min, max) => {
+  return Math.ceil(Math.random() * ( max - min ) + min);
+};
+
+// 参数： 入职时间。作用：随机生成工号
+export const generateJobNumber = (time) => {
+  console.log(time);
+  const letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
+  const index = Math.floor(Math.random() * letters.length)
+  return letters[index] + (new Date(time).getTime() / 1000).toString();
+};
+
+export const getCurrentTime = () => {
+  const date = new Date();
+  return `${date.getFullYear()}.${date.getMonth()}.${date.getDate()}`
+};
+
+export const compareByKey = (key) => {
+  return function (m, n) {
+    const time1 = new Date(m[key]);
+    const time2 = new Date(n[key]);
+    console.log(time1.getTime() - time2.getTime());
+    return time1.getTime() - time2.getTime();
+  }
+};
+
+export const search = (data, keyword) => {
+  const searchResult = [];
+  data.forEach(item => {
+    const keys = Object.keys(item);
+    for (let i = 0; i < keys.length; i++) {
+      if (item[keys[i]].toString().includes(keyword)) {
+        searchResult.push(item);
+        break;
+      }
+    }
+  });
+  return searchResult;
+};
+
 

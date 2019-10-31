@@ -36,3 +36,7 @@ export const changeUserInfo = (userData, url) => {
 export const getUserList = () => {
   return axios.get(GET_USER_LIST_URL);
 };
+
+export const addNewUser = (newUser, url) => {
+  return axios.post(url, newUser);
+};

@@ -1,7 +1,8 @@
 .manage-info {
   display: flex;
   flex-wrap: wrap;
-  height: 100vh; }
+  height: 100vh;
+  position: relative; }
   .manage-info .layout-content {
     flex-grow: 1;
     width: 100%;
@@ -36,5 +37,44 @@
   margin-bottom: 48px; }
   .header .button-list .button {
     margin-right: 28px; }
+
+.add-window {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999999; }
+  .add-window .inner-window {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    margin: auto;
+    min-height: 60vh;
+    max-height: 60vh;
+    overflow-y: scroll;
+    background-color: white;
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding: 24px 0; }
+    .add-window .inner-window::-webkit-scrollbar {
+      width: 5px; }
+    .add-window .inner-window .window-content {
+      width: 80%;
+      margin: auto; }
+      .add-window .inner-window .window-content .add-info-list .add-info-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 24px; }
+        .add-window .inner-window .window-content .add-info-list .add-info-item span.label {
+          display: inline-block;
+          width: 100px;
+          margin-right: 16px;
+          white-space: nowrap;
+          text-align: right; }
 
 /*# sourceMappingURL=index.css.map */
